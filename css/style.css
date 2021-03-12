@@ -1,0 +1,90 @@
+/*          Index Page Styling      */
+
+:root{
+    --primary-color: #FFE4E1;
+    --secondary-color: #FAA8AA;
+    --contrast-color: #463230;
+}
+
+body{
+    background-color: var(--primary-color); /*Misty Rose */
+}
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: .7rem 2rem;
+    background-color: #FFF;
+    border-bottom: 1px solid var(--contrast-color);
+}
+
+.logo{
+    color: var(--contrast-color);
+    font-weight: bold;
+    font-size: 1.6rem;
+    font-family: 'Give You Glory';
+    margin-top: .9rem;
+}
+.nav-links{
+    display: flex;
+    flex-direction: row;
+    margin-right: 1.3rem;
+}
+
+.nav-links .links-ul{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    margin: .7rem 1.3rem 0 0;
+}
+
+.links-ul li{
+    color: var(--contrast-color);
+    font-size: 1.2rem;
+    font-weight: 550;
+    margin-right: 1.7rem;
+}
+
+#active-link{
+    color: var(--secondary-color);
+}
+
+#link-book{
+    margin: .5rem 0 0 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 10rem;
+    height: 2.5rem;
+    background-color: #684F49;
+    color: #FEFAF9;
+    font-weight: 600;
+    transition: ease .4s;
+    cursor: pointer;
+}
+
+
+.main-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 88vh;
+    overflow: hidden;
+}
+
+.model-image-container{
+    box-sizing: border-box;
+    height: 100%;
+}
+
+.model-image-container img{
+    opacity: 0;
+    transform: translate(45rem, -8%);
+    height: auto;
+    width: 40rem;
+}
+
+.coming-soon-container{
+    width: 100%;
+}

@@ -1,0 +1,1 @@
+let tween = gsap.to("#model-image", {x: 60, duration: 1, opacity: 1, ease: "ease"});
