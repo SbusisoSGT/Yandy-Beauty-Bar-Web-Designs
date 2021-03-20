@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Give+You+Glory&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/coming.css">
+    <script src="https://kit.fontawesome.com/3ef12e339b.js"></script>
     <title>GSAP Tutorials</title>
 </head>
 <body>
@@ -29,18 +29,20 @@
         </div>
     </nav>
     <main class="main-container">
-        <section class="model-container">
-            <div class="model-image-container">
-                <img src="./images/model-03.png" id="model-image" alt="Model image">
-            </div>
-        </section>
-        <section class="coming-soon-container">
-            <div class="background-container"></div>
-            <div id="coming-container" style="display: flex; flex-direction: column; align-items: center;">
+        <div class="shapes-random" id="shape-01"></div>
+        <div class="shapes-random" id="shape-02"></div>
+        <div class="shapes-random" id="shape-03"></div>
+        <div class="shapes-random" id="shape-04"></div>
+        <section class="content-container">
+            <div class="model-image-container"></div>
+            <div id="coming-container">
                 <div class="coming-text-container">
                     <div class="coming-header">
                         Coming Soon
                     </div>
+                    <span class="coming-text">
+
+                    </span>
                 </div>
                 <div class="countdown-container">
                     <div class="time-container">
@@ -66,11 +68,13 @@
                         <button type="button" class="submit-form"> Notify Me <i class="far fa-paper-plane"></i></button>
                     </form>
                     <span class="form-subtext">
-                        Stay Tuned for something amazing!
+                        Subscribe to be notified!
                     </span>
                 </div>
                 <div class="contact-container">
-                    
+                    <a href=""><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                    <a href="https://instagram.com/yandybeautybar_" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+                    <a href="https://wa.me/27630284343" target="_blank"><i class="fab fa-whatsapp" aria-hidden="true"></i></a>
                 </div>
             </div>
         </section>
@@ -80,10 +84,7 @@
     <script>
         let tl = gsap.timeline();
 
-        tl.to(".background-container", {y: 0, duration: 1.3, opacity: 1, ease: "ease"})
-            .to("#coming-container", {y: 0, duration: 1, opacity: 1, ease: "ease"}, "-=.6");
 
     </script>
-    
 </body>
 </html>
