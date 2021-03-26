@@ -33,8 +33,14 @@
         <div class="shapes-random" id="shape-02"></div>
         <div class="shapes-random" id="shape-03"></div>
         <div class="shapes-random" id="shape-04"></div>
+
+        <div class="scroll-prompt">
+            <div class="scroll-prompt-dot"></div>
+        </div>
         <section class="content-container">
-            <div class="model-image-container"></div>
+            <div class="model-image-container">
+                <div class="color-overlay-bg"></div>
+            </div>
             <div id="coming-container">
                 <div class="coming-text-container">
                     <div class="coming-header">
@@ -79,12 +85,72 @@
             </div>
         </section>
     </main>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js"></script>
     <script src="js/app.js"></script>
     <script>
+
+        gsap.from('.logo', {
+            duration: .5,
+            opacity: 0,
+            y: -50,
+            delay: .4,
+        });
+
+        gsap.to('.model-image-container', {
+            scrollTrigger: {
+                trigger: '.model-image-container',
+                scrub: true,
+                start: '65% center',
+            },
+            duration: 1.1,
+            scale: 1.2,
+
+        });
+
+        gsap.from('.scroll-prompt', {
+            duration: 1.2,
+            opacity: 1,
+            y: 60,
+        });
+
+        gsap.to('.scroll-prompt', {
+            scrollTrigger: {
+                trigger: '.scroll-prompt',
+                scrub: true,
+                start: 'bottom 80%',
+            },
+            duration: 1.3,
+            opacity: 0,
+            scale: 1.1,
+        });
+
+        let screenWidth = document.documentElement.clientWidth;
+       
+        if(screenWidth < 768){
+            gsap.from('#coming-container', {
+                scrollTrigger: {
+                    trigger: '#coming-container',
+                    scrub: true,
+                    toggleClass: 'active',
+                    start: '-60% bottom',
+                },
+                duration: 1.5,
+                scale: .8,
+                opacity: 0
+            });
+        }
+
+        
+
         let tl = gsap.timeline();
 
-
+        // tl.fromTo(".background-container", {opacity: 1}, {duration: 1.3, opacity:0, ease: "ease"})
+        //     .fromTo();
+        // window.addEventListener('DOMContentLoaded', (event) => {
+        //     // sleep(5000);
+            
+        // });
     </script>
 </body>
 </html>
