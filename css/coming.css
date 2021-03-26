@@ -132,7 +132,7 @@ body{
     flex-direction: column; 
     align-items: center;
     justify-content: center;
-    padding: 0 2rem;
+    padding: 2rem;
 }
 
 .coming-soon-container{
@@ -143,11 +143,14 @@ body{
     width: 100%;
 }
 
+.coming-text-container{
+    /* padding-top: ; */
+}
 .coming-header{
     color: var(--dark-shade);
     font-family: 'Fjalla One';
     text-transform: uppercase;
-	font-size: 3.4rem;
+	font-size: 4rem;
 	z-index: 3;
 }
 
@@ -164,7 +167,7 @@ body{
     flex-flow: column wrap;
 	position: relative;
 	z-index: 3;
-	padding-top: 4rem;
+	padding-top: 2rem;
 }
 
 .form-container form{
@@ -208,7 +211,7 @@ body{
 	flex-direction: row;
 	position: relative;
 	z-index: 3;
-	margin-top: 2rem;
+	margin-top: 1rem;
 }
 
 .time-container{
@@ -282,22 +285,19 @@ body{
 }
 
 #shape-03{
-    bottom: -2rem;
-    left: -4rem;
-    border-left: 50px solid transparent;
-    border-right: 50px solid transparent;
-    border-bottom: 100px solid#D99C4D;
-    transform: rotate(-80deg);
+    bottom: -3rem;
+    left: -3rem;
+    border: 1rem solid #D99C4D;
 }
 
 #shape-04{
-    bottom: 2rem;
-    right: .5rem;
-    
+    bottom: -3rem;
+    right: -3rem;
     border-radius: 50%;
-    box-shadow: 1.5rem 1.5rem 0 0 #ffa390;
+    border: 1rem solid #ffa390;
     /* transform: rotate(180deg); */
 }
+
 
 .scroll-prompt{
     display: none;
@@ -351,7 +351,7 @@ body{
 @media only screen and (max-width: 768px){
 	.main-container{
 		flex-direction: column;
-        padding-bottom: 4rem;
+        padding-bottom: 6rem;
 	}
 
     .content-container {
@@ -419,7 +419,7 @@ body{
 @media only screen and (max-width: 552px){
 
     .content-container {
-        width: 85%;
+        width: 90%;
     }
 
     .model-image-container{
@@ -434,18 +434,26 @@ body{
         font-size: .9;
     }
 
+    .input-form{
+        width: 140%
+    }
+    
+    .submit-form{
+        width: 13rem;
+    }
+
     .shapes-random{
         width: 6rem;
         height: 6rem;
     }
 
-    #shape-03{
+    /* #shape-03{
         transform: rotate(-100deg);
     }
     
     #shape-04{
         box-shadow: 1.1rem 1.1rem 0 0 #ffa390;
         transform: rotate(-15deg);
-    }
+    } */
 
 }
